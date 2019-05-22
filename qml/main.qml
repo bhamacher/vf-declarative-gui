@@ -87,7 +87,7 @@ ApplicationWindow {
 
 
 
-  Loader {
+  /*Loader {
     //configures the virtual keyboard to use fullscreenMode=true
     active: HAS_QT_VIRTUAL_KEYBOARD
     sourceComponent: Component {
@@ -95,7 +95,7 @@ ApplicationWindow {
         textPreviewMode: true;
       }
     }
-  }
+  }*/
   Connections {
     target: VeinEntity
     onStateChanged: {
@@ -344,6 +344,7 @@ ApplicationWindow {
       }
 
       function initModel() {
+        this.append({name: "Test Page", icon: "qrc:/data/staticdata/resources/act_values.png", elementValue: "qrc:/qml/pages/TestPage.qml"});
         if(hasDependentEntities(["RMSModule1", "LambdaModule1", "THDNModule1", "DFTModule1", "POWER1Module1", "POWER1Module2", "POWER1Module3", "RangeModule1"]))
         {
           this.append({name: "Actual values", icon: "qrc:/data/staticdata/resources/act_values.png", elementValue: "qrc:/qml/pages/ActualValuesPage.qml"});

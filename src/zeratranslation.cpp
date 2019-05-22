@@ -70,7 +70,7 @@ void ZeraTranslation::setupTranslationFiles()
 {
 #ifdef QT_DEBUG
   //also load from qrc
-  const QStringList searchPaths {":/translations/", "/usr/share/zera/translations/", "/home/operator/translations/"};
+  const QStringList searchPaths {":/translations/", "/home/a.mueller/tmp/gui-translation", "/home/operator/translations/"};
 #else
   const QStringList searchPaths {"/usr/share/zera/translations/", "/home/operator/translations/"};
 #endif
@@ -311,6 +311,7 @@ void ZeraTranslation::reloadStringTable()
   //: polar (amplitude and phase) phasor diagram
   insert("Vector diagram", tr("Vector diagram"));
   insert("Actual values", tr("Actual values"));
+  insert("Test Page", tr("Test Page"));
   insert("Oscilloscope plot", tr("Oscilloscope plot"));
   //: FFT bar diagrams or tables that show the harmonic component distribution of the measured values
   insert("Harmonics", tr("Harmonics"));

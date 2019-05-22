@@ -740,7 +740,7 @@ class ZeraGlueLogicPrivate
           //dynamic translation
           m_dynamicMeasuringModeDescriptor.insert(valueCoordiates.y(), t_cmpData->newValue().toString()); //update dynamic reference table
           const QString translatedMode = m_translation->value(t_cmpData->newValue().toString()).toString();
-          Q_ASSERT(translatedMode.isEmpty() == false); //only triggers when the translation is missing in zeratranslation.cpp!
+          //Q_ASSERT(translatedMode.isEmpty() == false); //only triggers when the translation is missing in zeratranslation.cpp!
           // (%Mode) %Name
           const QString tmpValue = QString("(%1) %2").arg(translatedMode).arg(getAvmNameById(t_cmpData->entityId()));
           m_actValueData->setData(mIndex, tmpValue, valueCoordiates.x()); // QML doesn't understand column, so use roles
